@@ -12,8 +12,8 @@ const questions = [
     },
     {
         type: "input",
-        name: "email",
-        message: "Enter GithubEmail :"
+        name: "gmail",
+        message: "Enter GithubEmail:"
     },
     {
         type: "input",

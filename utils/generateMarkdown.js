@@ -20,14 +20,15 @@ function renderLicenseSection(license) {
 
 function generateMarkdown(data) {
   return `
-**${data.project}**
+# ${data.project}
 ## Description
   ${data.description}
 ## GitHub Profile
   Name: ${data.name}
-  Email: ${data.email}
+  Email: ${data.gmail}
   ${data.avatar_url}
-## Table of Contents
+
+  ## Table of Contents
   1. [Version](#version)
   2. [Project URL](#projectURL)
   3. [Installation](#install)
@@ -35,20 +36,20 @@ function generateMarkdown(data) {
   5. [License](#license)
   6. [Contributing](#contributing)
   7. [Tests](#tests)
-## [Version](#version)  ##
+## Version
   This is ${data.project} version ${data.version}.
-## [Project URL](#projectURL) ##
+## Project URL
   ${generateProjectUrl(data.github, data.project)}
-## [Installation](#install) ##
-  Run the following code in terminal to install: ${data.install}
-## [Usage](#usage) ##
+## Installation
+  ${data.install}
+## Usage
   ${data.usage}
-## [License](#license) ##
+## License
   ${renderLicenseSection(data.license)}
   ${renderLicenseBadge(data.license, data.github, data.project)}
-## [Contributions](#contributing) ##
+## Contributions
   ${data.contributing}
-## [Tests](#tests) ##
+## Tests
   ${data.tests}
 `;
 }
